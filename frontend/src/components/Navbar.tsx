@@ -1,5 +1,5 @@
 
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { NavLink } from "react-router-dom";
 import {
@@ -7,10 +7,12 @@ import {
   Bars3Icon,
   ChartBarIcon,
   CursorArrowRaysIcon,
+  MagnifyingGlassIcon,
   ShieldCheckIcon,
   Squares2X2Icon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
+import Searchmodal from './Searchmodal';
 
 
 
@@ -38,10 +40,13 @@ const solutions = [
   },
   
 ]
+
 export default function Navbar() {
-  return (
-    <div className=' inset-0 '>
-    <Popover className="relative bg--100">
+    const [searchOpen, setsearchOpen] = useState<boolean>(false)
+    return (
+    <div className=''>
+        {searchOpen? <Searchmodal searchOpen={searchOpen} setsearchOpen={setsearchOpen} /> : null}
+    <Popover className="relative bg--100 shadow-lg">
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6">
         <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -70,11 +75,19 @@ export default function Navbar() {
                 
                  
             ))}
-            
-            
           </Popover.Group>
+
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-          <NavLink to="/"  className={({ isActive }) => (isActive ? 'md:block hidden' : 'md:block hidden')}>
+          <button  className={'md:block hidden'}>
+          <div
+             
+             className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent  px-4 py-2 text-base font-medium text-black shadow-sm duration-500 hover:scale-105"
+           >
+             <MagnifyingGlassIcon className='text-3xl h-7 w-7  text-black' onClick={()=>(setsearchOpen(!searchOpen))}/>
+           </div>
+            </button>
+
+            <NavLink to="/"  className={({ isActive }) => (isActive ? 'md:block hidden' : 'md:block hidden')}>
           <div
              
              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-secondary px-4 py-2 text-base font-medium text-white shadow-sm duration-500 hover:scale-105"
@@ -83,6 +96,8 @@ export default function Navbar() {
            </div>
             </NavLink>
           </div>
+
+          
         </div>
       </div>
 
@@ -121,7 +136,7 @@ export default function Navbar() {
                       <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
                     </a>
                   ))}
-
+                
                 <a href="/" className='bg-secondary p-2 text-center text-white rounded-md'> Login</a>
                 </nav>
               </div>
