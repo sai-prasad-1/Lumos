@@ -68,10 +68,10 @@ const Home = (props: Props) => {
               <div className="flex flex-col">
                 <h3 className='text-gray-600 mb-5'>Skills</h3>
                 <div className="flex space-x-2">
-                  <span className='text-sm font-semibold bg-gray-200 p-2 rounded-xl'>React</span>
-                  <span className='text-sm font-semibold bg-gray-200 p-2 rounded-xl'>Node</span>
-                  <span className='text-sm font-semibold bg-gray-200 p-2 rounded-xl'>Express</span>
-                  <span className='text-sm font-semibold bg-gray-200 p-2 rounded-xl'>MongoDB</span>
+                  <span className='text-sm font-semibold bg-secondary text-white p-2 rounded-xl'>React</span>
+                  <span className='text-sm font-semibold bg-secondary text-white p-2 rounded-xl'>Node</span>
+                  <span className='text-sm font-semibold bg-secondary text-white p-2 rounded-xl'>Express</span>
+                  <span className='text-sm font-semibold bg-secondary text-white p-2 rounded-xl'>MongoDB</span>
                 </div>
               </div></div>
           </div>

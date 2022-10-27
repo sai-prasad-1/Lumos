@@ -14,7 +14,7 @@ const Login = (props: Props) => {
                             }}>
                                 <div className="overflow-hidden shadow-xl">
                                     <div className="bg-white px-4 py-5  sm:p-6  sm:rounded-md">
-                                    <h1 className='w-full text-center mb-8 font-bold text-2xl text-secondary '>Login</h1>
+                                    <h1 className='w-full text-center mb-8 font-bold text-2xl text-black '>Login</h1>
 
                                         <div className="grid grid-cols-6 gap-6">                                      
                                         <div className="col-span-6">
@@ -41,10 +41,15 @@ const Login = (props: Props) => {
                                                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                                                 />
                                             </div>
-                                            <div className="col-span-6 bg-black px-3 p-2 rounded-lg text-center mt-8 text-white mb-8">
+                                            <div className="col-span-6 bg-secondary px-3 p-2 rounded-lg text-center mt-8 text-white mb-8">
                                                 <button>Log in</button>
                                             </div>
                                             
+
+                                            <div className="col-span-6 bg-white px-3 p-2 rounded-lg text-center mt-8 text-black mb-8">
+                                                <button>Continue with Google</button>
+                                            </div>
+
                                         </div>
                                     </div>
                                     

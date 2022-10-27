@@ -61,7 +61,7 @@ const Home = (props: Props) => {
             <div>
               <h1 className='text-5xl font-bold mb-11 flex w-full '>About</h1>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, atque commodi reiciendis officia maiores facere veritatis eveniet dolore praesentium dignissimos sunt similique. Fugiat distinctio eius ratione beatae accusamus, quae aut? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat eaque, laboriosam impedit magni nihil, qui in dolorem inventore at ipsa accusantium laborum ipsam nesciunt, vel nulla ut velit dolore aut?
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, quidem minima in facere pariatur ratione recusandae ipsum voluptates quos, nisi repellendus adipisci ex quod nesciunt labore quo nostrum architecto aspernatur.
+              <br></br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, quidem minima in facere pariatur ratione recusandae ipsum voluptates quos, nisi repellendus adipisci ex quod nesciunt labore quo nostrum architecto aspernatur.
             </div>
           </div>
         </div>
