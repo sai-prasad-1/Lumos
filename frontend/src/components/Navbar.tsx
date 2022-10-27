@@ -43,7 +43,7 @@ export default function Navbar() {
     return (
     <div className=' bg-gray-50'>
         {searchOpen? <Searchmodal searchOpen={searchOpen} setsearchOpen={setsearchOpen} /> : null}
-    <Popover className="relative max-h-[15vh] shadow-lg">
+    <Popover className="relative max-h-[15vh] shadow-lg z-[9999]">
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6">
         <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
