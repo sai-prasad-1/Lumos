@@ -13,9 +13,6 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import Searchmodal from './Searchmodal';
-
-
-
 const solutions = [
   {
     name: 'Home',
@@ -46,7 +43,7 @@ export default function Navbar() {
     return (
     <div className=''>
         {searchOpen? <Searchmodal searchOpen={searchOpen} setsearchOpen={setsearchOpen} /> : null}
-    <Popover className="relative bg--100 shadow-lg">
+    <Popover className="relative max-h-[15vh] shadow-lg">
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6">
         <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">

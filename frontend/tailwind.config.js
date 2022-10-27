@@ -10,9 +10,12 @@ module.exports = {
         quaternary: "#4B5563",
       },
       backgroundImage: {
-        "hero-bg": "url('./assets/img/herobg.jpg')",
+        "hero-bg": "url('./assets/img/image.png')",
+        "login-bg": "url('./assets/img/herobg.jpg')",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 };
