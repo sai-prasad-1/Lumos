@@ -41,14 +41,15 @@ const solutions = [
 export default function Navbar() {
     const [searchOpen, setsearchOpen] = useState<boolean>(false)
     return (
-    <div className=''>
+    <div className=' bg-gray-100'>
         {searchOpen? <Searchmodal searchOpen={searchOpen} setsearchOpen={setsearchOpen} /> : null}
     <Popover className="relative max-h-[15vh] shadow-lg">
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6">
         <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <NavLink to="/"  className={({ isActive }) => (isActive ? 'md:block hidden' : 'md:block hidden')}>
+            <NavLink to="/"  className={({ isActive }) => (isActive ? 'md:block hidden text-3xl' : 'md:block hidden')}>
               LUMOS
+              <p className='text-xs font-semibold '>A Levantate Concern</p>
             </NavLink>
             <NavLink to="/"  className={({ isActive }) => (isActive ? 'block md:hidden' : 'md:block hidden')}>
               LUMOS

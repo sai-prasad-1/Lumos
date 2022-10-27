@@ -7443,6 +7443,11 @@ react-is@^18.0.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
+react-mouse-image-move@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/react-mouse-image-move/-/react-mouse-image-move-1.4.2.tgz#fd7bc7e30536c005ae23474c11dde0d91313c4ba"
+  integrity sha512-qPIwUfyFmU0Wc+ES5mC5TE4kGhtxOwHawbozzHu9nu8NAGMNeGyHAxYvY2mdjEqqsTZzsxLk0JYOJ9H+U8mR+Q==
+
 react-refresh@^0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"
@@ -7517,6 +7522,11 @@ react-scripts@5.0.1:
     workbox-webpack-plugin "^6.4.1"
   optionalDependencies:
     fsevents "^2.3.2"
+
+react-simple-typewriter@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/react-simple-typewriter/-/react-simple-typewriter-4.0.5.tgz#404a1e12ccb97ad7813b48f8e58813117fe8e3fb"
+  integrity sha512-2CmVpD1kTifRE8gixr2z+1aYS136ZbAC/UATNzvkzl4tSiThT/ATXH4rOGVwWLTlOWCVnSewObXo/kJlV2HMxw==
 
 react@^18.2.0:
   version "18.2.0"

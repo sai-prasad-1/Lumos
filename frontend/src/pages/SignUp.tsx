@@ -4,25 +4,15 @@ import Navbar from '../components/Navbar'
 
 type Props = {}
 
-const Login = (props: Props) => {
+
+
+
+
+
+const   Signup = () => {
     return (
-        <>
-            <Navbar />
-            <Signup />
-        </>
-    )
-}
-
-export default Login
-
-
-
-
-
-const Signup = () => {
-    return (
-        <>
-            <div className='w-screen h-[] bg-login-bg bg- px-24 relative f '>
+        <><Navbar/>
+            <div className='w-screen h-[] bg-login-bg bg- px-24 relative mt-11 '>
 
                 <div className="mt-10 sm:mt-0">
                     <div className="md:grid md:grid-cols-3 md:gap-6">
@@ -417,3 +407,8 @@ const Signup = () => {
     )
 
 }
+
+
+
+
+export default Signup
