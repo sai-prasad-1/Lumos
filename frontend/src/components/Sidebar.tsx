@@ -36,7 +36,7 @@ const Sidebar = (props: Props) => {
     },
   ]
   return (
-    <div className='bg-gray-200 h-full p-6'>
+    <div className='bg-gray-50 border-r-4 h-full p-6 fixed'>
       <div className='w-full flex flex-col items-center justify-center p-2'>
         <NavLink to="/" className={({ isActive }) => (isActive ? 'md:block hidden text-3xl' : 'md:block hidden')}>
           LUMOS
@@ -64,8 +64,6 @@ const Sidebar = (props: Props) => {
             <i className={link.icon}></i>
             <span className='capitalize'>{link.name}</span>
           </div>
-
-
         ))}
 
       </div>

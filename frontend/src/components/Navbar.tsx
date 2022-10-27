@@ -41,7 +41,7 @@ const solutions = [
 export default function Navbar() {
     const [searchOpen, setsearchOpen] = useState<boolean>(false)
     return (
-    <div className=' bg-gray-100'>
+    <div className=' bg-gray-50'>
         {searchOpen? <Searchmodal searchOpen={searchOpen} setsearchOpen={setsearchOpen} /> : null}
     <Popover className="relative max-h-[15vh] shadow-lg">
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6">
