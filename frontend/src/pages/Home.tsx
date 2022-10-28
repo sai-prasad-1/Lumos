@@ -162,7 +162,7 @@ const Home = (props: Props) => {
                   </svg>
                 </div>
 
-                <h3 className="text-lg md:text-xl font-semibold text-center mb-2">Dark Mode</h3>
+                <h3 className="text-lg md:text-xl font-semibold text-center mb-2">Night Mode</h3>
                 <p className="text-gray-500 text-center mb-2">Filler text is dummy text which has no meaning however looks very similar to real text.</p>
                 <a href="#" className="text-secondary -500 hover:text-secondary -600 active:text-secondary -700 font-bold transition duration-100">More</a>
               </div>
