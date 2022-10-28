@@ -1,5 +1,5 @@
 
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { NavLink } from "react-router-dom";
 import {
@@ -7,13 +7,12 @@ import {
   Bars3Icon,
   ChartBarIcon,
   CursorArrowRaysIcon,
+  MagnifyingGlassIcon,
   ShieldCheckIcon,
   Squares2X2Icon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-
-
-
+import Searchmodal from './Searchmodal';
 const solutions = [
   {
     name: 'Home',
@@ -26,7 +25,7 @@ const solutions = [
     icon: CursorArrowRaysIcon,
   }, {
     name: 'Features',
-    href: 'features',
+    href: '/features',
     icon: CursorArrowRaysIcon,
   },
 
@@ -38,15 +37,19 @@ const solutions = [
   },
   
 ]
+
 export default function Navbar() {
-  return (
-    <div className=' inset-0 '>
-    <Popover className="relative bg--100">
+    const [searchOpen, setsearchOpen] = useState<boolean>(false)
+    return (
+    <div className=' bg-gray-50'>
+        {searchOpen? <Searchmodal searchOpen={searchOpen} setsearchOpen={setsearchOpen} /> : null}
+    <Popover className="relative max-h-[15vh] shadow-lg z-[9999]">
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6">
         <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <NavLink to="/"  className={({ isActive }) => (isActive ? 'md:block hidden' : 'md:block hidden')}>
+            <NavLink to="/"  className={({ isActive }) => (isActive ? 'md:block hidden text-3xl' : 'md:block hidden')}>
               LUMOS
+              <p className='text-xs font-semibold '>A Levantate Concern</p>
             </NavLink>
             <NavLink to="/"  className={({ isActive }) => (isActive ? 'block md:hidden' : 'md:block hidden')}>
               LUMOS
@@ -70,11 +73,19 @@ export default function Navbar() {
                 
                  
             ))}
-            
-            
           </Popover.Group>
+
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-          <NavLink to="/"  className={({ isActive }) => (isActive ? 'md:block hidden' : 'md:block hidden')}>
+          <button  className={'md:block hidden'}>
+          <div
+             
+             className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent  px-4 py-2 text-base font-medium text-black shadow-sm duration-500 hover:scale-105"
+           >
+             <MagnifyingGlassIcon className='text-3xl h-7 w-7  text-black' onClick={()=>(setsearchOpen(!searchOpen))}/>
+           </div>
+            </button>
+
+            <NavLink to="/login"  className={({ isActive }) => (isActive ? 'md:block hidden' : 'md:block hidden')}>
           <div
              
              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-secondary px-4 py-2 text-base font-medium text-white shadow-sm duration-500 hover:scale-105"
@@ -82,7 +93,19 @@ export default function Navbar() {
              Login
            </div>
             </NavLink>
+            <NavLink to="/signup"  className={({ isActive }) => (isActive ? 'md:block hidden' : 'md:block hidden')}>
+          <div
+             
+             className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-secondary px-4 py-2 text-base font-medium text-white shadow-sm duration-500 hover:scale-105"
+           >
+             Sign Up
+           </div>
+            </NavLink>
           </div>
+
+          
+
+          
         </div>
       </div>
 
@@ -121,8 +144,9 @@ export default function Navbar() {
                       <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
                     </a>
                   ))}
-
-                <a href="/" className='bg-secondary p-2 text-center text-white rounded-md'> Login</a>
+                
+                <NavLink  to="/login" className='bg-secondary p-2 text-center text-white rounded-md'> Login</NavLink>
+                <NavLink  to="/signup" className='bg-secondary p-2 text-center text-white rounded-md'> Signup</NavLink>
                 </nav>
               </div>
             </div>

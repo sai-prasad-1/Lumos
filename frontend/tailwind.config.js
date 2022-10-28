@@ -4,15 +4,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#111828",
+        primary: "#CC5CFF",
         secondary: "#16BFFD",
         tertiary: "#43CEA2",
         quaternary: "#4B5563",
       },
       backgroundImage: {
-        "hero-bg": "url('./assets/img/herobg.jpg')",
+        "hero-bg": "url('./assets/img/image.png')",
+        "login-bg": "url('./assets/img/herobg.jpg')",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('tailwind-scrollbar'),
+  ],
 };
