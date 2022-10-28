@@ -10,10 +10,92 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model Auth {
   id Int @id @default(autoincrement())
   username String @unique
   email String @unique
   passwordHash String
+  userType String
+}
+
+
+model Student {
+  id Int @id @default(autoincrement())
+  email String
+  address String
+  firstName String
+  lastName  String
+  collegeName String
+  Designation String
+  githubUsername String
+  achievements Achievement[]
+  certificates Certificate[]
+  invitations Invitation[]
+}
+
+model Achievement {
+  id Int @id @default(autoincrement())
+  competition String?
+  designation String
+  user Student @relation(fields: [userId], references: [id])
+  userId Int
+}
+
+model Invitation {
+  id Int @id @default(autoincrement())
+  email String
+  eventId Int
+  teamName String
+  teamId Int
+  accepted Boolean
+  student Student @relation(fields: [studentId], references: [id])
+  studentId Int
+}
+
+model Certificate {
+  id String @id
+  issuer String
+  verified Boolean
+  user Student @relation(fields: [userId], references: [id])
+  userId Int
+}
+
+model College {
+  id String @id
+  email String
+  collegeName String
+  country String
+  streetAddress String?
+  city String?
+  state String?
+  events Event[]
+}
+
+model Event {
+  id Int @id @default(autoincrement())
+  college College @relation(fields: [collegId], references: [id])
+  collegId String
+  eventName String
+  eventDate DateTime
+  participants Participant[]
+  teams Team[]
+}
+
+model Participant {
+  id Int @id @default(autoincrement())
+  email String
+  event Event @relation(fields: [eventId], references: [id])
+  team Team @relation(fields: [teamId], references: [id])
+  teamId Int
+  eventId Int
+  pending Boolean
+  RSVP Boolean
+}
+
+model Team {
+  id Int @id @default(autoincrement())
+  teamName String
+  participants Participant[]
+  event Event @relation(fields: [eventId], references: [id])
+  eventId Int
 }
