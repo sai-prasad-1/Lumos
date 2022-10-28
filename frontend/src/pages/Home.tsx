@@ -156,13 +156,13 @@ const Home = (props: Props) => {
               </div>
 
               <div className="flex flex-col items-center">
-                <div className="w-12 md:w-14 h-12 md:h-14 flex justify-center items-center text-secondary -500 mb-2 sm:mb-4">
+              <div className="w-12 md:w-14 h-12 md:h-14 flex justify-center items-center text-secondary -500 mb-2 sm:mb-4">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-full h-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
 
-                <h3 className="text-lg md:text-xl font-semibold text-center mb-2">Night Mode</h3>
+                <h3 className="text-lg md:text-xl font-semibold text-center mb-2">99.99% Up Time</h3>
                 <p className="text-gray-500 text-center mb-2">Filler text is dummy text wghich has no meaning however looks very similar to real text.</p>
                 <a href="#" className="text-secondary -500 hover:text-secondary -600 active:text-secondary -700 font-bold transition duration-100">More</a>
               </div>

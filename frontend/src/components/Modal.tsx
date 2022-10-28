@@ -6,6 +6,9 @@ import { toast } from 'react-toastify'
 type Props = {
     searchOpen: boolean,
     setsearchOpen: React.Dispatch<React.SetStateAction<boolean>>
+    eventName: string,
+    userMail: string | null,
+    eventid: number,
 }
 const Modal = (props: Props) => {
     const [joinwithteams, setJoinwithteams] = React.useState(false)
@@ -15,7 +18,7 @@ const Modal = (props: Props) => {
             <div className="search md:min-w-[40%] min-w-[90%] bg- mt-24 p-4 flex items-center justify-center">
                 {showInitial ? <Initial joinwithteams={setJoinwithteams} setshowInitial={setshowInitial} /> : null}
                 {joinwithteams ? <JoinwithTeams /> : null}
-                {!joinwithteams && !showInitial ? <JoinasIndividual /> : null}
+                {!joinwithteams && !showInitial ? <JoinasIndividual eventName={props.eventName} email={props.userMail} eventid={props.eventid}/> : null}
             </div>
             <div className="absolute inset-0" onClick={() => (props.setsearchOpen(!props.searchOpen))}></div>
         </div>
@@ -90,7 +93,7 @@ const JoinwithTeams = () => {
                 </div>
             </div>
             {searched.length > 0 ?
-            <div className='mt-4 rounded-md p-4 bg-white'>
+            <div className='mt-4 rounded-md p-4 bg-white relative z-[99999]'>
                 {searched.length > 0 ? searched.map((user:any) => {
                     return (<div className='flex items-center justify-between p-2 w-full'>
                         <div className='flex items-center justify-between w-full space-x-2'>
@@ -107,9 +110,12 @@ const JoinwithTeams = () => {
     )
 }
 
-const JoinasIndividual = () => {
-    // axios.post
-    window.location.href = '/dashboard'
+const JoinasIndividual = ({eventName,email,eventid}:any) => {
+    useEffect(() => {
+    axios.post('joinAsIndividual',{eventName:eventName,teamName:"balh blah",email:email,eventId:eventid}).then((res)=>{
+        toast.success('Added to event')
+    })
+})
 
     return (
         <h1>JoinasIndividual</h1>

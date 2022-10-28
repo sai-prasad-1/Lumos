@@ -1,5 +1,5 @@
 import { HeartIcon } from '@heroicons/react/24/outline'
-import React from 'react'
+import React, { useEffect } from 'react'
 import img from "../assets/img/card.jpg"
 import Modal from './Modal'
 
@@ -16,7 +16,7 @@ type Props = {
 
         email: string
 
-        id: string
+        id: number
 
         state: null | string
 
@@ -27,14 +27,42 @@ type Props = {
 
         eventName: string
 
+        teams: Array<{
+            id: string
+            teamName: string
+            teamMembers: Array<{
+                id: string
+                name: string
+                email: string
+            }>
+        }>
+
+        participants: Array<{
+            id: string
+            email: string
+            teamId: string
+            eventid: string
+            pending: boolean
+            rsvp: boolean
+        }>
+
+
     }
 }
 const Card = (props: Props) => {
     const d:string = new Date(props.project.eventDate).toDateString();
     const [open, setopen] = React.useState(false)
+    const authUser = "praj2k2@gmail.com"
+    const [applied, setapplied] = React.useState(false)
+    useEffect(() => {
+    if (authUser) {
+        if(props.project.participants.some((participant)=>participant.email===authUser)){
+            setapplied(true)
+        }
+    }},[applied])
     return (
         <div className='max-w-[500px] bg-white -500 shadow-xl '>
-            {open?<Modal searchOpen={open} setsearchOpen={setopen} />:null}
+            {open?<Modal searchOpen={open} setsearchOpen={setopen}  eventName={props.project.eventName} eventid={props.project.id} userMail={authUser}/>:null}
             <div className='w-full flex p-4 items-center'>
                 <div className='flex justify-center items-center w-12 h-12 rounded-full bg-primary border-2 border-secondary'>
                     <h1 className='text-white text-2xl'>{props.project.college.collegeName[0]}</h1>
@@ -51,8 +79,8 @@ const Card = (props: Props) => {
                     <HeartIcon className='w-8 ' />
                     <span className='ml-2'>12,345 Likes</span>
                 </div>
-                <div className='flex items-center mr-4 p-2 px-4 bg-secondary rounded-lg' onClick={()=>{setopen(!open)}}>
-                    Apply
+                <div className={`flex items-center mr-4 p-2 px-4 bg-secondary rounded-lg ${applied?"bg-green-400 opacity-70":"bg-secondary"}`} onClick={()=>{setopen(!open)}}>
+                    {applied?"Applied":"Apply"}
                 </div>
 
             </div>

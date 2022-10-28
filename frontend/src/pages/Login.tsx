@@ -20,6 +20,7 @@ const Login = (props: Props) => {
             password
         }).then(res => {
             console.log(res.data)
+            sessionStorage.setItem('user', res.data.user)
             if(res.data.error) {
                 toast.error(res.data.error)
             } else {
