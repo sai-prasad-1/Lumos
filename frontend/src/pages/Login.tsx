@@ -1,4 +1,5 @@
 import React from 'react'
+import { AiFillGoogleCircle } from 'react-icons/ai'
 import Navbar from '../components/Navbar'
 
 type Props = {}
@@ -46,8 +47,8 @@ const Login = (props: Props) => {
                                             </div>
                                             
 
-                                            <div className="col-span-6 bg-white px-3 p-2 rounded-lg text-center mt-8 text-black mb-8">
-                                                <button>Continue with Google</button>
+                                            <div className="col-span-6  px-3 p-2  rounded-lg text-center text-black border-gray-300 border mb-8">
+                                                <button className='flex items-center justify-center w-full space-x-3'> <AiFillGoogleCircle className='mr-3'/>  Continue with Google</button>
                                             </div>
 
                                         </div>

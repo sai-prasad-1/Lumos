@@ -25,7 +25,7 @@ const solutions = [
     icon: CursorArrowRaysIcon,
   }, {
     name: 'Features',
-    href: 'features',
+    href: '/features',
     icon: CursorArrowRaysIcon,
   },
 
