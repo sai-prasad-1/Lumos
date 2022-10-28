@@ -10,6 +10,10 @@ type Props = {}
 
 
 const   Signup = () => {
+    const [email, setEmail] = React.useState('')
+    const [password, setPassword] = React.useState('')
+    
+
     return (
         <><Navbar/>
             <div className='w-screen h-[] bg-login-bg bg- px-24 relative mt-11 '>

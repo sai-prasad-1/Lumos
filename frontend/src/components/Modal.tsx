@@ -1,6 +1,7 @@
 import { MagnifyingGlassIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import axios from 'axios'
 import React, { useEffect, useRef } from 'react'
+import { toast } from 'react-toastify'
 
 type Props = {
     searchOpen: boolean,
@@ -41,35 +42,38 @@ const Initial = ({ joinwithteams, setshowInitial }: any) => {
 
 const JoinwithTeams = () => {
     // list of 6 unique users with email and name
-    const users = ["james",
-        'john',
-        'robert',
-        'michael',
-        'william',
-        'david',
-        'richard',
-        'charles',
-        'joseph',
-        'thomas',
-        'christopher',
-        'daniel',
-        'paul',
-        'mark',
-        'donald',
-    ]
+    const [users, setUsers] = React.useState([])
+    useEffect(() => {
+        axios.get('users').then((res) => {
+            setUsers(res.data)
+            console.log(res.data);
+            
+        })
+    }, [])
 
-    const handelInvite=()=>{
-        console.log('invite')
+    const handelInvite=(email:string)=>{
+        axios.post('invite', {email:email}).then((res)=>{
+            toast.success('Invitation sent')
+            
+        }
+        )
+        .catch((err)=>{
+            toast.error('Something went wrong')
+            
+        }
+        )
     }
     const [search, setsearch] = React.useState('')
     const [searched, setsearched] = React.useState<string[]>([])
 
     useEffect(() => {
         if (search.length > 0) {
-            const filtered = users.filter((user) => {
-                return user.toLowerCase().includes(search.toLowerCase())
+            const filtered = users.filter((user:any) => {
+                return user.username.toLowerCase().includes(search.toLowerCase())
             })
             setsearched(filtered)
+            console.log(filtered);
+            
         }
         else {
             setsearched([])
@@ -87,15 +91,15 @@ const JoinwithTeams = () => {
             </div>
             {searched.length > 0 ?
             <div className='mt-4 rounded-md p-4 bg-white'>
-                {searched.length > 0 ? searched.map((user) => {
+                {searched.length > 0 ? searched.map((user:any) => {
                     return (<div className='flex items-center justify-between p-2 w-full'>
                         <div className='flex items-center justify-between w-full space-x-2'>
                             <div className="flex items-center space-x-2">
 
                             <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" className='h-10 w-10 rounded-full' />
-                            <h1 className='capitalize'>{user}</h1>
+                            <h1 className='capitalize'>{user.username}</h1>
                             </div>
-                            <div className='p-2 self-end bg-secondary cursor-pointer text-white rounded-md' onClick={()=>{handelInvite()}}>invite</div>
+                            <div className='p-2 self-end bg-secondary cursor-pointer text-white rounded-md duration-100 scale-105' onClick={()=>{handelInvite(user.email)}}>invite</div>
                         </div>
                     </div>)}) : null}
             </div>:null}
