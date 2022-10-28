@@ -162,8 +162,8 @@ const Home = (props: Props) => {
                   </svg>
                 </div>
 
-                <h3 className="text-lg md:text-xl font-semibold text-center mb-2">Dark Mode</h3>
-                <p className="text-gray-500 text-center mb-2">Filler text is dummy text which has no meaning however looks very similar to real text.</p>
+                <h3 className="text-lg md:text-xl font-semibold text-center mb-2">Night Mode</h3>
+                <p className="text-gray-500 text-center mb-2">Filler text is dummy text wghich has no meaning however looks very similar to real text.</p>
                 <a href="#" className="text-secondary -500 hover:text-secondary -600 active:text-secondary -700 font-bold transition duration-100">More</a>
               </div>
 
@@ -187,7 +187,7 @@ const Home = (props: Props) => {
                   <div className="mb-12">
                     <div className="text-gray-800 text-2xl font-bold text-center mb-2">Free Trial</div>
 
-                    <p className="text-gray-500 text-center px-8 mb-8">For individuals and organizations who want to try our system</p>
+                    <p className="text-gray-500 text-center px-8 mb-8">For Companies and Recruiters who want to try our system</p>
 
                     <div className="space-y-4">
 
@@ -197,7 +197,7 @@ const Home = (props: Props) => {
                           <circle cx="8" cy="8" r="3" fill="currentColor" className="text-gray-500" />
                         </svg>
 
-                        <span className="text-gray-600">1.000 MB file storage</span>
+                        <span className="text-gray-600">feature 1</span>
                       </div>
 
                       <div className="flex items-center gap-2">
@@ -206,7 +206,7 @@ const Home = (props: Props) => {
                           <circle cx="8" cy="8" r="3" fill="currentColor" className="text-gray-500" />
                         </svg>
 
-                        <span className="text-gray-600">2.000 MB bandwidth per month</span>
+                        <span className="text-gray-600">feature 2</span>
                       </div>
 
                       <div className="flex items-center gap-2">
@@ -215,7 +215,7 @@ const Home = (props: Props) => {
                           <circle cx="8" cy="8" r="3" fill="currentColor" className="text-gray-500" />
                         </svg>
 
-                        <span className="text-gray-600">200 tasks per month</span>
+                        <span className="text-gray-600">feature 3</span>
                       </div>
 
                       <div className="flex items-center gap-2">
@@ -224,26 +224,26 @@ const Home = (props: Props) => {
                           <circle cx="8" cy="8" r="3" fill="currentColor" className="text-gray-500" />
                         </svg>
 
-                        <span className="text-gray-600">Comunity support</span>
+                        <span className="text-gray-600">feature 4</span>
                       </div>
 
                     </div>
                   </div>
 
                   <div className="mt-auto">
-                    <a href="#" className="block bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-secondary -300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">$0 / Free</a>
+                    <a href="#" className="block bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-secondary -300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Free</a>
                   </div>
                 </div>
               </div>
 
               <div className="flex flex-col border-2 border-secondary -500 rounded-lg overflow-hidden">
-                <div className="bg-secondary -500 text-white text-sm font-semibold tracking-widest text-center uppercase py-2">Popular choise</div>
+                <div className="bg-secondary -500 text-white text-sm font-semibold tracking-widest text-center uppercase py-2">Popular choice</div>
 
                 <div className="flex flex-col flex-1 p-6 pt-8">
                   <div className="mb-12">
-                    <div className="text-gray-800 text-2xl font-bold text-center mb-2">Team</div>
+                    <div className="text-gray-800 text-2xl font-bold text-center mb-2">Premium</div>
 
-                    <p className="text-gray-500 text-center mx-auto px-8 mb-8">Avanced feaures for Individuals and organizations</p>
+                    <p className="text-gray-500 text-center mx-auto px-8 mb-8">Advanced feaures for Companies and Recruiters</p>
 
                     <div className="space-y-4">
 
@@ -253,7 +253,7 @@ const Home = (props: Props) => {
                           <circle cx="8" cy="8" r="3" fill="currentColor" className="text-gray-500" />
                         </svg>
 
-                        <span className="text-gray-600">Unlimited file storage</span>
+                        <span className="text-gray-600">feature 1</span>
                       </div>
 
                       <div className="flex items-center gap-2">
@@ -262,7 +262,7 @@ const Home = (props: Props) => {
                           <circle cx="8" cy="8" r="3" fill="currentColor" className="text-gray-500" />
                         </svg>
 
-                        <span className="text-gray-600">10 GB bandwidth per month</span>
+                        <span className="text-gray-600">feature 2</span>
                       </div>
 
                       <div className="flex items-center gap-2">
@@ -271,7 +271,7 @@ const Home = (props: Props) => {
                           <circle cx="8" cy="8" r="3" fill="currentColor" className="text-gray-500" />
                         </svg>
 
-                        <span className="text-gray-600">10.000 tasks per month</span>
+                        <span className="text-gray-600">feature 3</span>
                       </div>
 
                       <div className="flex items-center gap-2">
@@ -280,7 +280,7 @@ const Home = (props: Props) => {
                           <circle cx="8" cy="8" r="3" fill="currentColor" className="text-gray-500" />
                         </svg>
 
-                        <span className="text-gray-600">Email support</span>
+                        <span className="text-gray-600">feature 4</span>
                       </div>
 
                       <div className="flex items-center gap-2">
@@ -289,14 +289,14 @@ const Home = (props: Props) => {
                           <circle cx="8" cy="8" r="3" fill="currentColor" className="text-gray-500" />
                         </svg>
 
-                        <span className="text-gray-600">100 Webhooks</span>
+                        <span className="text-gray-600">feature 5</span>
                       </div>
 
                     </div>
                   </div>
 
                   <div className="mt-auto">
-                    <a href="#" className="block bg-secondary -500 hover:bg-secondary -600 active:bg-secondary -700 focus-visible:ring ring-secondary -300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">$19</a>
+                    <a href="#" className="block bg-secondary -500 hover:bg-secondary -600 active:bg-secondary -700 focus-visible:ring ring-secondary -300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">$20</a>
                   </div>
                 </div>
               </div>
@@ -308,7 +308,7 @@ const Home = (props: Props) => {
                   <div className="mb-12">
                     <div className="text-gray-800 text-2xl font-bold text-center mb-2">Enterprise</div>
 
-                    <p className="text-gray-500 text-center mx-auto px-8 mb-8">Maximum performace for organisations</p>
+                    <p className="text-gray-500 text-center mx-auto px-8 mb-8">Maximum features for Recruiters</p>
 
                     <div className="space-y-4">
 
@@ -318,7 +318,7 @@ const Home = (props: Props) => {
                           <circle cx="8" cy="8" r="3" fill="currentColor" className="text-gray-500" />
                         </svg>
 
-                        <span className="text-gray-600">Unlimited file storage</span>
+                        <span className="text-gray-600">feaature 1</span>
                       </div>
 
                       <div className="flex items-center gap-2">
@@ -327,7 +327,7 @@ const Home = (props: Props) => {
                           <circle cx="8" cy="8" r="3" fill="currentColor" className="text-gray-500" />
                         </svg>
 
-                        <span className="text-gray-600">Unlimited bandwidth per month</span>
+                        <span className="text-gray-600">feature 2</span>
                       </div>
 
                       <div className="flex items-center gap-2">
@@ -336,7 +336,7 @@ const Home = (props: Props) => {
                           <circle cx="8" cy="8" r="3" fill="currentColor" className="text-gray-500" />
                         </svg>
 
-                        <span className="text-gray-600">1.000.000 tasks per month</span>
+                        <span className="text-gray-600">feature 3</span>
                       </div>
 
                       <div className="flex items-center gap-2">
@@ -345,7 +345,7 @@ const Home = (props: Props) => {
                           <circle cx="8" cy="8" r="3" fill="currentColor" className="text-gray-500" />
                         </svg>
 
-                        <span className="text-gray-600">Email and phone support</span>
+                        <span className="text-gray-600">feature 4</span>
                       </div>
 
                       <div className="flex items-center gap-2">
@@ -354,7 +354,7 @@ const Home = (props: Props) => {
                           <circle cx="8" cy="8" r="3" fill="currentColor" className="text-gray-500" />
                         </svg>
 
-                        <span className="text-gray-600">Unlimited Webhooks</span>
+                        <span className="text-gray-600">feature 5</span>
                       </div>
 
                     </div>
@@ -524,7 +524,7 @@ const Home = (props: Props) => {
 
             </div>
 
-            <div className="text-gray-400 text-sm text-center border-t py-8">© 2021 - Present Lumos. All rights reserved.</div>
+            <div className="text-gray-400 text-sm text-center border-t py-8">© 2021 - Present Flowrift. All rights reserved.</div>
           </div>
         </div>
       </footer>
