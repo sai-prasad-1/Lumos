@@ -524,7 +524,7 @@ const Home = (props: Props) => {
 
             </div>
 
-            <div className="text-gray-400 text-sm text-center border-t py-8">© 2021 - Present Flowrift. All rights reserved.</div>
+            <div className="text-gray-400 text-sm text-center border-t py-8">© 2021 - Present Lumos. All rights reserved.</div>
           </div>
         </div>
       </footer>
