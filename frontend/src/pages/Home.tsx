@@ -451,7 +451,7 @@ const Home = (props: Props) => {
                   </div>
 
                   <div>
-                    <a href="#" className="text-gray-500 hover:text-secondary -500 active:text-secondary -600 transition duration-100">Customers</a>
+                    <a href="#" className="text-gray-500 hover:text-secondary -500 active:text-secondary -600 transition duration-100">test1</a>
                   </div>
                 </nav>
               </div>
@@ -473,11 +473,11 @@ const Home = (props: Props) => {
                   </div>
 
                   <div>
-                    <a href="#" className="text-gray-500 hover:text-secondary -500 active:text-secondary -600 transition duration-100">Press</a>
+                    <a href="#" className="text-gray-500 hover:text-secondary -500 active:text-secondary -600 transition duration-100">test1</a>
                   </div>
 
                   <div>
-                    <a href="#" className="text-gray-500 hover:text-secondary -500 active:text-secondary -600 transition duration-100">Blog</a>
+                    <a href="#" className="text-gray-500 hover:text-secondary -500 active:text-secondary -600 transition duration-100">test2</a>
                   </div>
                 </nav>
               </div>
@@ -495,11 +495,11 @@ const Home = (props: Props) => {
                   </div>
 
                   <div>
-                    <a href="#" className="text-gray-500 hover:text-secondary -500 active:text-secondary -600 transition duration-100">Chat</a>
+                    <a href="#" className="text-gray-500 hover:text-secondary -500 active:text-secondary -600 transition duration-100">test1</a>
                   </div>
 
                   <div>
-                    <a href="#" className="text-gray-500 hover:text-secondary -500 active:text-secondary -600 transition duration-100">FAQ</a>
+                    <a href="#" className="text-gray-500 hover:text-secondary -500 active:text-secondary -600 transition duration-100">test2</a>
                   </div>
                 </nav>
               </div>
@@ -517,7 +517,7 @@ const Home = (props: Props) => {
                   </div>
 
                   <div>
-                    <a href="#" className="text-gray-500 hover:text-secondary -500 active:text-secondary -600 transition duration-100">Cookie settings</a>
+                    <a href="#" className="text-gray-500 hover:text-secondary -500 active:text-secondary -600 transition duration-100">test1</a>
                   </div>
                 </nav>
               </div>
