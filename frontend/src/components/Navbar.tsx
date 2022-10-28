@@ -85,7 +85,7 @@ export default function Navbar() {
            </div>
             </button>
 
-            <NavLink to="/"  className={({ isActive }) => (isActive ? 'md:block hidden' : 'md:block hidden')}>
+            <NavLink to="/login"  className={({ isActive }) => (isActive ? 'md:block hidden' : 'md:block hidden')}>
           <div
              
              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-secondary px-4 py-2 text-base font-medium text-white shadow-sm duration-500 hover:scale-105"
@@ -93,7 +93,17 @@ export default function Navbar() {
              Login
            </div>
             </NavLink>
+            <NavLink to="/signup"  className={({ isActive }) => (isActive ? 'md:block hidden' : 'md:block hidden')}>
+          <div
+             
+             className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-secondary px-4 py-2 text-base font-medium text-white shadow-sm duration-500 hover:scale-105"
+           >
+             Sign Up
+           </div>
+            </NavLink>
           </div>
+
+          
 
           
         </div>
@@ -135,7 +145,8 @@ export default function Navbar() {
                     </a>
                   ))}
                 
-                <a href="/" className='bg-secondary p-2 text-center text-white rounded-md'> Login</a>
+                <NavLink  to="/login" className='bg-secondary p-2 text-center text-white rounded-md'> Login</NavLink>
+                <NavLink  to="/signup" className='bg-secondary p-2 text-center text-white rounded-md'> Signup</NavLink>
                 </nav>
               </div>
             </div>
